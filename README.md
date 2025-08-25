@@ -14,6 +14,25 @@ It provides clean and modular implementations of **data handling, trading strate
 
 ---
 
+## Project Structure 
+
+├── README.md                   # prject description
+├── requirements.txt            # dependencies Python
+├── src
+│   ├── backtest
+│   │   └── engine.py           # ядро бэктестера: цикл по барам, сделки, pnl
+│   ├── config.py               # конфиг: тикер, таймфрейм, комиссии, пути
+│   ├── data
+│   │   ├── binance_client.py   # клиент/обертка для данных (вероятно Binance)
+│   │   └── fetch.py            # функции загрузки OHLCV и сохранения в csv/parquet
+│   ├── live
+│   │   └── README.md           # задел под лайв‑трейдинг
+│   ├── run_backtest.py         # CLI-скрипт: собирает всё и запускает engine
+│   └── strategies
+│       └── ma_crossover.py     # стратегия Moving Average Crossover
+└── tests
+    └── test_backtest_engine.py # базовые тесты для движка
+
 
 ## 🚀 Getting Started
 Clone the repository and install dependencies in a virtual environment:

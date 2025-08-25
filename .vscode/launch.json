@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: run_backtest",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/run_backtest.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--symbol",
+        "BTC/USDT",
+        "--timeframe",
+        "1h",
+        "--limit",
+        "2000",
+        "--short",
+        "20",
+        "--long",
+        "50",
+        "--fee_bps",
+        "10"
+      ]
+    }
+  ]
+}
